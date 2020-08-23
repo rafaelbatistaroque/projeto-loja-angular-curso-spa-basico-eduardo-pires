@@ -1,0 +1,27 @@
+<div class="container main-container mt-3">
+
+    <div class="row text-center">
+        <div class="col-md-4 pb-30" *ngFor='let produto of produtos'>
+            <div class="card h-100">
+                <a href="" class="text-decoration-none">
+                    <div class="align-content-center">
+                        <img src="">
+                    </div>
+                </a>
+                <div class="card-body">
+                    <h4 class="card-title">{{produto.title}}</h4>
+                    <p>Por apenas: </p>
+                    <div>
+                        <H4>50000</H4>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="" class="btn btn-primary">
+                        <span class="fa fa-shopping-cart"></span>
+                        Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

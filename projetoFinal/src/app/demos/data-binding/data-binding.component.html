@@ -1,0 +1,37 @@
+<div class="container main-container">
+    <h3>Interpolação</h3>
+    <span class="text-muted small d-block">Quando as informações da view são recebidas do angular e inseridas entre
+        chaves.</span>
+    <span class="d-block my-2">O mínimo de clique é: {{contadorCliques}}</span>
+    <hr class="by-10">
+    <h3>Property Binding</h3>
+    <span class="text-muted small d-block">Quando as informações da view são alteradas pelo angular.</span>
+    <button class="btn btn-info my-2" [disabled]="contadorCliques >= 10">Info</button>
+    <hr>
+    <h3>Event Binding</h3>
+    <span class="text-muted small d-block">Quando os eventos da view interferem nas informações do angular.</span>
+    <div>
+        <button class="btn btn-warning" (click)='adicionarClique()'>Clique-me</button>
+        <button class="btn btn-secondary m-2" (click)='zerarContador()' [disabled]='contadorCliques < 10'>Zerar</button>
+    </div>
+    <hr>
+    <h3>Two-way Binding</h3>
+    <span class="text-muted small d-block">Quando as alterações são realizadas pelas duas
+        vias, view/angular.</span>
+    <!-- Modelo 3 -->
+    <div class="my-2">
+        <input type="text" placeholder="Digite seu nome" [(ngModel)]='nome'>
+        <label class="ml-2" [ngClass]='nome'>Seu nome é: {{nome}}</label>
+    </div>
+
+    <!-- Modelo 2 -->
+    <!-- <div class="my-2">
+        <input type="text" placeholder="Digite seu nome" [ngModel]='nome' (ngModelChange)='nome = $event'>
+        <label class="mx-2">Seu nome é: {{nome}}</label>
+    </div> -->
+    <!-- Modelo 1 -->
+    <!-- <div class="my-2">
+        <input type="text" placeholder="Digite seu nome" (keyup)='alterarTexto($event)'>
+        <label class="mx-2">Seu nome é: {{nome}}</label>
+    </div> -->
+</div>
